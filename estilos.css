@@ -1,0 +1,248 @@
+/*medidas celular 320x480px iphone4*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 8px;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+
+}
+.bodyhome {
+    display: grid;
+    grid-template-areas:
+        "encabezado encabezado encabezado encabezado"
+        "vida vida vida sugerencias"
+        "boxmodel boxmodel boxmodel sugerencias"
+        "footer footer footer footer";
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 3fr 3fr 4rem;
+    height: 100vh;
+    column-gap: 0.5rem;
+    row-gap: 0.5rem;
+}
+
+.encabezado {
+    background-color: cornsilk;
+    grid-area: encabezado;
+    background-image: url(./imagenes/Razas/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+
+}
+
+.menuSuperior {
+    list-style: none;
+    text-align: center;
+    margin: 1.2rem;
+}
+
+.menuSuperior li {
+    display: inline-block;
+    padding: 1rem;
+}
+
+.menuSuperior a {
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    padding: 4px;
+    font-size: 12px;
+}
+.menuSuperior a:hover {
+    font-size: 1.6rem;
+    transform: scale(3, 2);
+    transition: 1.5s;
+    color: rgba(248, 54, 174, 0.664);
+
+}
+
+.irapie a {
+    color: black;
+    font-size: 8px;
+    float: right;
+     
+}
+
+.footer {
+    background-color: gainsboro;
+    grid-area: footer;
+
+}
+
+.vida {
+    background-color: rgba(240, 219, 232, 0.932);
+    grid-area: vida;
+}
+
+.boxmodel {
+    background-color: rgba(240, 219, 232, 0.932);
+    grid-area: boxmodel;
+    display: inline-block;
+}
+
+
+.boxmodel1,
+.boxmodel2 {
+    float: left;
+    background-color: rgb(240, 195, 223);
+    width: 110px;
+    height: 170px;
+    padding: 4px 6px;
+    margin: 4px;
+    overflow: auto;
+    border: solid 1px black;
+}
+
+
+.sugerencias {
+    /*background-color: rgb(240, 195, 223);*/
+    background-image: linear-gradient(rgb(241, 158, 209), rgb(245, 230, 239));
+    grid-area: sugerencias;
+    padding: 2rem;
+    line-height: 2rem;
+
+}
+
+
+@media (min-width:768px) {
+    .bodyhome {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        font-size: 1.5rem;
+        padding: 4px;
+
+    }
+    .menuSuperior a {
+        text-decoration: none;
+        color: black;
+        font-weight: 700;
+        padding: 1.5rem;
+        font-size: 3rem;
+    }
+    .menuSuperior a:hover {
+        font-size: 3.3rem;
+        transform: scale(3, 2);
+        transition: 1.5s;
+        color: rgba(248, 54, 174, 0.664);
+    }
+
+    .boxmodel1,
+    .boxmodel2 {
+        float: left;
+        background-color: rgb(240, 195, 223);
+        width: 260px;
+        height: 380px;
+        padding: 6px 8px;
+        margin: 10px;
+        overflow: auto;
+        border: solid 1px black;
+    }
+
+    
+    .sugerencias{
+        padding: 3.2rem;
+    line-height: 5rem;
+    }
+    .irapie a{
+        font-size: 15px;
+    }
+    .footer{
+        font-size: 12px;
+    }
+}
+
+@media (min-width:1200px) {
+    .bodyhome {
+        display: grid;
+        grid-template-rows: 1fr 2fr 3fr 1fr;
+        grid-template-columns: repeat(4, 1fr);
+        font-size: 2rem;
+        padding: 3px;
+    }
+    .menuSuperior a {
+        text-decoration: none;
+        color: black;
+        font-weight: 700;
+        padding: 3rem;
+        font-size: 3.8rem;
+    }
+    .menuSuperior a:hover {
+        font-size: 4rem;
+        transform: scale(3, 2);
+        transition: 1.5s;
+        color: rgba(248, 54, 174, 0.664);
+    }
+    .boxmodel1,
+    .boxmodel2 {
+        float: left;
+        background-color: rgb(240, 195, 223);
+        width: 51rem;
+        height: 35rem;
+        padding: 1rem;
+        margin: 2.2rem;
+        overflow: auto;
+        border: solid 1px black;
+    }
+    .footer{
+        font-size: 1.8rem;
+    }
+
+}
+/* contenido razas*/
+.bodyhome2 {
+    display: grid;
+    grid-template-areas:
+        "encabezado encabezado encabezado"
+        "imgA imgA imgA"
+        "imgB imgB imgB"
+        "imgC imgC imgC"
+        "imgD imgD imgD"
+        "footer footer footer";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 2fr 2fr 2fr 2fr 1fr;
+    height: 100vh;
+    column-gap: 5px;
+    row-gap: 10px;
+
+}
+
+.imgA {
+    grid-area: imgA;
+    background-color: rgb(240, 195, 223);
+}
+
+.imgB {
+    grid-area: imgB;
+    background-color: rgb(240, 195, 223);
+}
+
+.imgC {
+    grid-area: imgC;
+    background-color: rgb(240, 195, 223);
+}
+
+.imgD {
+    grid-area: imgD;
+    background-color: rgb(240, 195, 223);
+}
+
+.imgRazas {
+    padding: 2rem;
+    width: 40%;
+}
+
+.imgRazas img {
+    width: 100%;
+    border-radius: 3px;
+}
