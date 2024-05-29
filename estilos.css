@@ -25,10 +25,11 @@ body {
         "boxmodel boxmodel boxmodel sugerencias"
         "footer footer footer footer";
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr 3fr 3fr 4rem;
+    grid-template-rows: 1fr 3fr 3fr 1fr;
     height: 100vh;
     column-gap: 0.5rem;
     row-gap: 0.5rem;
+    
 }
 
 .encabezado {
@@ -67,6 +68,29 @@ body {
 
 }
 
+.vida {
+    background-color: rgba(240, 219, 232, 0.932);
+    grid-area: vida;
+    padding: 1rem;
+}
+
+.boxmodel {
+    background-color: rgba(240, 219, 232, 0.932);
+    grid-area: boxmodel;
+    display: inline-block;
+}
+
+.boxmodel1,
+.boxmodel2 {
+    float: left;
+    background-color: rgb(240, 195, 223);
+    width: 110px;
+    height: 170px;
+    padding: 4px 6px;
+    margin: 4px;
+    overflow: auto;
+    border: solid 1px black;
+}
 .irapie a {
     color: black;
     font-size: 8px;
@@ -80,37 +104,14 @@ body {
 
 }
 
-.vida {
-    background-color: rgba(240, 219, 232, 0.932);
-    grid-area: vida;
-}
-
-.boxmodel {
-    background-color: rgba(240, 219, 232, 0.932);
-    grid-area: boxmodel;
-    display: inline-block;
-}
-
-
-.boxmodel1,
-.boxmodel2 {
-    float: left;
-    background-color: rgb(240, 195, 223);
-    width: 110px;
-    height: 170px;
-    padding: 4px 6px;
-    margin: 4px;
-    overflow: auto;
-    border: solid 1px black;
-}
-
-
 .sugerencias {
     /*background-color: rgb(240, 195, 223);*/
     background-image: linear-gradient(rgb(241, 158, 209), rgb(245, 230, 239));
     grid-area: sugerencias;
-    padding: 2rem;
-    line-height: 2rem;
+    padding: 1rem;
+    line-height: 2.5rem;
+
+    
 
 }
 
@@ -119,7 +120,7 @@ body {
     .bodyhome {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        font-size: 2rem;
+        font-size: 1.7rem;
         padding: 4px;
 
     }
@@ -361,7 +362,7 @@ body {
         "grillacarta"
         "comunicate"
         "footer";
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr 1fr;
     height: 100vh;
 }
 .grillacartas{
@@ -426,5 +427,70 @@ body {
     97% { transform:translateY(0%); }
     99% { transform:translateY(-3%); }
     100% { transform:translateY(0); }
+}
+
+@media (min-width:1200px){
+    .bodyhome3{
+        font-size: 2.2rem;
+        row-gap: 0rem;
+    }
+    .menuSuperior li{
+        padding: 3rem;
+    }
+   
+    .menuSuperior a{
+        font-weight: 700;
+        padding: 3rem;
+        font-size: 3.8rem;
+    }
+    .menuSuperior a:hover {
+        font-size: 4rem;
+        transform: scale(3, 2);
+        transition: 1.5s;
+        color: rgba(248, 54, 174, 0.664);
+    }
+    .infocomunicate{
+        background-color: rgb(228, 176, 228);
+        width: 18rem;
+        height: 9rem;
+        transition: height 2s, width 1s;
+        border: solid 0.1rem rgba(0, 0, 0, 0.493);
+        margin: 0.5rem;
+        overflow: hidden;
+    }
+    .infocomunicate:hover{
+        height: 15rem;
+        width: 28rem;
+        transform: skewX(25deg);
+        margin-left: 3rem;
+    }
+    .com_box{
+        font-size: 1.8rem;
+        line-height: 1.3rem;
+        margin-left: 3rem;
+    
+    }
+    .info{
+        font-size: 1.6rem;
+        padding: 0.3rem;
+        line-height: 2.8rem;
+    }
+    .carrito img{
+        height: 5rem;
+        width: 5rem;
+        margin: 1rem;
+        float: right;
+        animation: bounce 2s ease infinite;
+    }
+    @keyframes bounce {
+        70% { transform:translateY(0%); }
+        80% { transform:translateY(-15%); }
+        90% { transform:translateY(0%); }
+        95% { transform:translateY(-7%); }
+        97% { transform:translateY(0%); }
+        99% { transform:translateY(-3%); }
+        100% { transform:translateY(0); }
+    }
+
 }
     
